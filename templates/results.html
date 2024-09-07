@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Parts Analysis Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .part {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .part h2 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .part p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rocket Parts Analysis Results</h1>
+    {% if parts %}
+        {% for part in parts %}
+            <div class="part">
+                <h2>{{ part.name }}</h2>
+                <p>{{ part.description if part.description else "No description available." }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No parts were found in the document.</p>
+    {% endif %}
+    <a href="/">Back to Upload</a>
+</body>
+</html>
