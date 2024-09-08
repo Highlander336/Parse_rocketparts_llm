@@ -56,3 +56,16 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Environment Setup
+
+This project uses environment variables to securely store sensitive information. Follow these steps to set up your environment:
+
+1. Create a `.env.local` file in the root directory of the project.
+2. Add your Anthropic API key to the `.env.local` file:
+   ```
+   ANTHROPIC_API_KEY=your_actual_api_key_here
+   ```
+3. Replace `your_actual_api_key_here` with your real Anthropic API key.
+
+Note: The `.env.local` file is ignored by Git to keep your API key secure. Never commit this file or share it publicly.

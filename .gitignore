@@ -77,3 +77,6 @@ Thumbs.db
 # Project specific
 uploads/
 *.pdf
+
+# Environment variables
+.env.local
